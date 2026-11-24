@@ -5,6 +5,11 @@ class AppTheme {
   static const Color primaryBlue = Color(0xFF2D52E5);
   static const Color lightBlue = Color(0xFFEEF1FD);
   static const Color accentBlue = Color(0xFF4B6BEC);
+
+  // Logo Brand Colors (from official app icon)
+  static const Color logoNavy = Color(0xFF0F4486);
+  static const Color logoCyan = Color(0xFF19C5EB);
+  static const Color logoIceBlue = Color(0xFFBEECF9);
   static const Color successGreen = Color(0xFF34C759);
   static const Color errorRed = Color(0xFFFF3B30);
   static const Color textPrimary = Color(0xFF0F1A2E);

@@ -120,32 +120,38 @@ class _FindParkingScreenState extends State<FindParkingScreen> {
                     children: [
                       Row(
                         children: [
-                          Container(
-                            width: 32,
-                            height: 32,
-                            decoration: BoxDecoration(
-                              color: AppTheme.primaryBlue,
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: const Center(
-                              child: Text(
-                                'P',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Image.asset(
+                              'assets/images/app_logo.png',
+                              width: 32,
+                              height: 32,
+                              fit: BoxFit.cover,
                             ),
                           ),
                           const SizedBox(width: 8),
-                          const Text(
-                            'PARKROUTE',
-                            style: TextStyle(
-                              color: AppTheme.primaryBlue,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 1.5,
+                          RichText(
+                            text: const TextSpan(
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 1.5,
+                                fontFamily: 'SF Pro Display',
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'PARK',
+                                  style: TextStyle(
+                                    color: AppTheme.logoNavy,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: 'ROUTE',
+                                  style: TextStyle(
+                                    color: AppTheme.logoCyan,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],

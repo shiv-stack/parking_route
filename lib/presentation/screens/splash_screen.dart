@@ -171,58 +171,25 @@ class _SplashScreenState extends State<SplashScreen>
                           child: ScaleTransition(
                             scale: _logoScale,
                             child: Container(
-                              width: 84,
-                              height: 84,
+                              width: 96,
+                              height: 96,
                               decoration: BoxDecoration(
-                                gradient: const LinearGradient(
-                                  colors: [
-                                    Color(0xFF2D52E5),
-                                    Color(0xFF1E3BB8),
-                                  ],
-                                  begin: Alignment.topLeft,
-                                  end: Alignment.bottomRight,
-                                ),
                                 borderRadius: BorderRadius.circular(24),
                                 boxShadow: [
                                   BoxShadow(
                                     color: AppTheme.primaryBlue
-                                        .withValues(alpha: 0.38),
-                                    blurRadius: 22,
+                                        .withValues(alpha: 0.35),
+                                    blurRadius: 24,
                                     offset: const Offset(0, 10),
                                   ),
                                 ],
                               ),
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  // White "P"
-                                  const Text(
-                                    'P',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 42,
-                                      fontWeight: FontWeight.w900,
-                                      letterSpacing: -1,
-                                    ),
-                                  ),
-                                  // Small navigation route pin dot accent
-                                  Positioned(
-                                    right: 18,
-                                    top: 18,
-                                    child: Container(
-                                      width: 10,
-                                      height: 10,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xFF60E7FF),
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: Colors.white,
-                                          width: 2,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(24),
+                                child: Image.asset(
+                                  'assets/images/app_logo.png',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -247,19 +214,30 @@ class _SplashScreenState extends State<SplashScreen>
                               Text(
                                 'Park',
                                 style: TextStyle(
-                                  color: AppTheme.textPrimary,
-                                  fontSize: 32,
+                                  color: AppTheme.logoNavy,
+                                  fontSize: 34,
                                   fontWeight: FontWeight.w800,
                                   letterSpacing: -0.5,
                                 ),
                               ),
-                              Text(
-                                'Route',
-                                style: TextStyle(
-                                  color: AppTheme.primaryBlue,
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.w800,
-                                  letterSpacing: -0.5,
+                              ShaderMask(
+                                shaderCallback: (bounds) =>
+                                    const LinearGradient(
+                                  colors: [
+                                    AppTheme.logoCyan,
+                                    Color(0xFF0D92D2),
+                                  ],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ).createShader(bounds),
+                                child: const Text(
+                                  'Route',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 34,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: -0.5,
+                                  ),
                                 ),
                               ),
                             ],
