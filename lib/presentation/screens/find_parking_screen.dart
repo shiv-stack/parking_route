@@ -225,7 +225,7 @@ class _FindParkingScreenState extends State<FindParkingScreen> {
                       children: [
                         TileLayer(
                           urlTemplate: AppConstants.mapTileUrl,
-                          userAgentPackageName: 'com.example.park_locator',
+                          userAgentPackageName: 'com.shivam.park_locator',
                           maxZoom: 19,
                         ),
                         if (state.hasLocation)

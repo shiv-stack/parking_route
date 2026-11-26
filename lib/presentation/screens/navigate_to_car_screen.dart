@@ -220,7 +220,7 @@ class _NavigateToCarScreenState extends State<NavigateToCarScreen> {
                       children: [
                         TileLayer(
                           urlTemplate: AppConstants.mapTileUrl,
-                          userAgentPackageName: 'com.example.park_locator',
+                          userAgentPackageName: 'com.shivam.park_locator',
                           maxZoom: 19,
                         ),
 

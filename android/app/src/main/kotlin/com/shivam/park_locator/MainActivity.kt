@@ -1,4 +1,4 @@
-package com.example.park_locator
+package com.shivam.park_locator
 
 import io.flutter.embedding.android.FlutterActivity
 

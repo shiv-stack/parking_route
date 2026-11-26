@@ -174,7 +174,7 @@ class _ParkingDetailsScreenState extends State<ParkingDetailsScreen> {
                       children: [
                         TileLayer(
                           urlTemplate: AppConstants.mapTileUrl,
-                          userAgentPackageName: 'com.example.park_locator',
+                          userAgentPackageName: 'com.shivam.park_locator',
                           maxZoom: 19,
                         ),
                         MarkerLayer(
